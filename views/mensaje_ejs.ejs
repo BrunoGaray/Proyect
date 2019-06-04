@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <% mensajes.forEach(function(m){ %>
+        <div class="mensaje">
+          <div class="autor">
+            <h3>Autor:</h3>
+            <%= m.autor %>
+          </div>
+          <div class="texto">
+            <h3>Texto:</h3>
+            <%= m.texto %>
+          </div>
+        </div>
+      <% }); %>
+  </body>
+</html>
