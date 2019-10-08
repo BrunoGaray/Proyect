@@ -1,0 +1,6 @@
+Create view VueloViajoJuana As
+select vuelo.* from vuelo join reserva
+on vuelo.numerovuelo = reserva.numerovuelo
+join cliente
+on reserva.numerodocumento = cliente.numerodocumento
+where nombre = 'Juana'

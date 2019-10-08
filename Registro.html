@@ -1,0 +1,118 @@
+<html>
+<head>
+  <link rel="shortcut icon" href="favicon.ico"/>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link rel="stylesheet" href="./HojaDeEstilo.css"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+  <div class="margenesRegistro">
+    <div class="shadow-lg p-3 mb-6 mr-6 ml-6 mt-30 bg-white rounded" class="overflow-auto" class="container">
+        <img src="icono.png" style="width: 10%">
+        <div class="day">
+            <form action="/registrousuario" method="POST">
+            <div class="row">
+                <div class="col">
+                      <div class="form-group">
+                          <label for="exampleInputNombre1">Nombre Usuario*</label>
+                          <input type="name" class="form-control" id="exampleInputNombre1" aria-describedby="nameHelp" placeholder="Nombre Candidato*"
+                              required>
+                          <small id="nombreHelp" class="form-text text-muted"></small>
+                      </div>
+
+            <div class="form-group">
+                <label for="exampleInputApellido1">Apellido*</label>
+                <input type="name" class="form-control" id="exampleInputApellido1" aria-describedby="ApellidoHelp" placeholder="Apellido*"
+                    required>
+                <small id="ApellidoHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email*</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email*" required>
+                <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+                    <label for="exampleInputCi1">Cedula*</label>
+                    <input type="ci" class="form-control" id="exampleInputCi1" aria-describedby="ciHelp" placeholder="Cedula*" required>
+                    <small id="ciHelp" class="form-text text-muted"></small>
+                </div>
+                <label for="exampleInputContraseña1">Contraseña*</label>
+                <input type="password" class="form-control" id="exampleInputContraseña1" aria-describedby="contraseñaHelp" placeholder="Contraseña*"
+                    required>
+                <small id="contraseñaHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleInputTelefono1">Telefono*</label>
+                <input type="telefono" class="form-control" id="exampleInputTelefono1" aria-describedby="telefonoHelp" placeholder="Telefono*" required>
+                <small id="telefonoHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+              <label for="inputFechaDeNacimiento">Fecha De Nacimiento*</label>
+              <input type="date" class="form-control" id="inputFechaDeNacimiento" placeholder="Fecha De Nacimiento" required>
+            </div>
+            <div class="col-6">
+
+              </div>
+              <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="dropdownCheck2" required>
+                  <label class="form-check-label" for="dropdownCheck2">
+                      Acepto Los Terminos
+                  </label>
+            </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+                            <input onclick="sendData()" type="submit" href="/formularioverificacion" class="btn btn-primary btn-lg" value="Enviar">
+                              <script>
+                              /*router.get('/perfilcanididato', async function(req, res) {
+                                let candidato = await Candidato.insert();
+                                res.json(candidato.rows);
+                              });*/
+                              function sendData(){
+                                console.log('hola');
+                                let data = {
+                                  nombre: document.getElementById('exampleInputNombre1').value,
+                                  apellido: document.getElementById('exampleInputApellido1').value,
+                                  email: document.getElementById('exampleInputEmail1').value,
+                                  cedula: document.getElementById('exampleInputCi1').value,
+                                  contraseña: document.getElementById('exampleInputContraseña1').value,
+                                  telefono: document.getElementById('exampleInputTelefono1').value,
+                                  fechanac: document.getElementById('inputFechaDeNacimiento').value,
+                                }
+                                console.log(data);
+                                fetch('http://localhost:3000/usuario', {
+                                          method: 'POST', // or 'PUT'
+                                          body: JSON.stringify(data), // data can be `string` or {object}!
+                                          headers:{
+                                            'Content-Type': 'application/json'
+                                          }
+                                        });
+                              }
+
+
+                            </script>
+                          </input>
+
+
+                        </div>
+                </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </form>
+    </div>
+  </div>
+</body>
+
+</html>

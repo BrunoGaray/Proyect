@@ -1,0 +1,16 @@
+#1 {
+align:center;
+}
+
+.h1 {
+  width: 100px;
+  height: 100px;
+}
+
+.row {
+  display: inline-block;
+}
+
+#21 {
+background-color: red;
+}

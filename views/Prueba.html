@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>REGISTRAR</title>
+<script type="text/javascript">
+function validar(form){
+
+if(form.mail.value==""){
+alert ("EL CAMPO E-MAIL ES OBLIGATORIO DEBE INGRESARLO");
+form.mail.focus();return false;
+}
+if(form.password.value == "") {
+alert ("EL CAMPO PASSWORD ES OBLIGATORIO");
+form.password.focus();return false;
+}
+if(form.password2.value == "") {
+alert ("EL CAMPO RECTIFICAR CONTRASEÑA ES OBLIGATORIO");
+form.password2.focus();return false;
+}
+if(form.password.value != form.password2.value){
+alert ("Las 2 contraseñas no coniciden");
+form.password.focus();return false;
+}
+if(form.pais.value == "") {
+alert ("EL CAMPO PAÍS ES OBLIGATORIO");
+form.pais.focus();return false;
+}
+return true;
+
+}
+</script>
+
+</head>
+
+<body>
+
+TU CORREO SERÁ EL NOMBRE DE USUARIO PARA PODER INGRESAR A LA PÁGINA
+<form action="registrarusuario.php" method="post" onsubmit="return validar(this);">
+<p>E-MAIL:
+<input type="text" name="mail" value="" />
+<br>
+<br>
+CONTRASEÑA:
+<input type="password" name="password" maxlength="8" value="" />
+</p>
+<p>REPITE TU CONTRASE&Ntilde;A
+<input type="password" name="password2" maxlength="8" value="" />
+<br>
+<BR>
+LUGAR DE RESIDENCIA:
+<input type="text" name="pais" value="" />
+</p>
+<p><input type="submit" value="Enviar datos" name="enviar" />
+<input type="reset" value="Restablecer" name="B2" /></p>
+</form>
+
+</body>
+</html>

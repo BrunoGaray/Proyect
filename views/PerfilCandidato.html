@@ -1,0 +1,81 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="./HojaDeEstilo.css"/>
+
+
+   <nav class="navbar navbar-expand-sm bg-dark">
+
+     <ul class="navbar-nav">
+       <li class="nav-item">
+         <a class="nav-link" href="/iniciousuario">Inicio</a>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link" href="/">Cerrar Sesion</a>
+        </li>
+   </nav>
+  </head>
+  <body>
+    <div class="PerfilCandidato">
+      <div class="container">
+        <div class="day">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card-body">
+              <h5 class="card-title">Mi Curriculum</h5>
+              <a href="/curriculum" class="btn btn-primary">Ver</a>
+              <a href="#" class="btn btn-primary">Enviar Mail</a>
+              <a href="/activarodesactivarcurriculum" class="btn btn-primary">Configurar</a>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <img class="imgaenPerfil" class="card-img-top" src="data:image/jpeg;base64,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" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nombre</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="container">
+        <div class="toggleButton">
+          <div class="border">
+            <div class="button">
+
+            </div>
+          </div>
+        </div>
+        <div class="day">
+        <div class="row">
+          <div class="col-sm-12">
+          <div class="card-body">
+            <h5 class="card-title">Mis Tests</h5>
+            <a href="/testdecompetencia" class="btn btn-primary">Test Competencia</a>
+          </div>
+        </div>
+          <div class="col-sm-12">
+            <div class="card-body">
+              <h5 class="card-title">Mis Ofertas</h5>
+              <a href="/ofertasmisofertas" class="btn btn-primary">Ver Ofertas</a>
+              <a href="#" class="btn btn-primary">Recibir Mail</a>
+              <a href="/invitaciones" class="btn btn-primary">Ver Invitaciones</a>
+
+
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="card-body">
+              <h5 class="card-title">Mi Cuenta</h5>
+              <a href="/cambiosdeusuario" class="btn btn-primary">Cambiar Usuario</a>
+              <a href="#" class="btn btn-primary">Darse De Baja</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="ModoOscuro.js"></script>
+  </body>
+</html>
