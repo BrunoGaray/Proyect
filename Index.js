@@ -4,6 +4,7 @@ const router = require('./ruta');
 
 const Candidato = require('./queries/candidato');
 const Usuario = require('./queries/usuario');
+const Empresa = require('./queries/empresa');
 
 const PORT = 3000;
 
@@ -41,6 +42,17 @@ app.post("/usuario", async function(req, res){
   let info = req.body;
   console.log(req.body);
   Usuario.insertUsuario(info).then(() => {
+    console.log('ejecutado con exito')
+  }).catch(err => {
+    console.log('errorrrrr')
+    console.log(err)
+  });
+});
+
+app.post("/empresa", async function(req, res){
+  let info = req.body;
+  console.log(req.body);
+  Empresa.insertEmpresa(info).then(() => {
     console.log('ejecutado con exito')
   }).catch(err => {
     console.log('errorrrrr')

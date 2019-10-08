@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const Candidato = require('./queries/candidato');
 const Usuario = require('./queries/usuario');
+const Empresa = require('./queries/empresa');
 const bodyParser = require('body-parser');
 
 router.use(bodyParser.json());
@@ -115,5 +116,9 @@ router.post('/registrousuario',function(req,res){
 	console.log(req.body);
 });
 
+router.post('/registroempresa',function(req,res){
+	//res.sendFile (__dirname+'/Registro.html');
+	console.log(req.body);
+});
 
 module.exports = router;

@@ -28,112 +28,48 @@
         <div class="col">
           <form action="/perfilgestorempresa" method="GET">
             <div class="form-group">
-              <label for="exampleInputEmail1">Nombre Empresa</label>
-              <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Nombre Empresa" required>
+              <label for="exampleInputId1">Id Empresa</label>
+              <input type="id" class="form-control" id="IdEmpresa" aria-describedby="idHelp" placeholder="Id Empresa" required>
+              <small id="idHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputName1">Nombre Empresa</label>
+              <input type="name" class="form-control" id="NombreEmpresa" aria-describedby="nameHelp" placeholder="Nombre Empresa" required>
               <small id="nombreHelp" class="form-text text-muted"></small>
             </div>
             <div class="form-group">
-              <label for="exampleInputCodigo1">Codigo Empresa</label>
-              <input type="codigo" class="form-control" id="exampleInputCodigo1" aria-describedby="codigoHelp" placeholder="Codigo Empresa"
+              <label for="exampleInputDireccion1">Direccion</label>
+              <input type="direccion" class="form-control" id="Direccion" aria-describedby="direccionHelp" placeholder="Direccion"
                 required>
-              <small id="codigoHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputCiudad1">Ciudad</label>
-              <input type="ciudad" class="form-control" id="exampleInputCiudad1" aria-describedby="ciudadHelp" placeholder="Ciudad" required>
-              <small id="ciudadHelp" class="form-text text-muted"></small>
+              <small id="direccionHelp" class="form-text text-muted"></small>
             </div>
 
         </div>
       </div>
       <div class="row">
         <div class="col">
-
           <div class="form-group">
-            <label for="exampleInputEmail1">Razon Social</label>
-            <input type="razon" class="form-control" id="exampleInputRazon1" aria-describedby="razonHelp" placeholder="Razon Social"
-              required>
-            <small id="razonHelp" class="form-text text-muted"></small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputDireccion1">Direccion</label>
-            <input type="direccion" class="form-control" id="exampleInputDireccion1" aria-describedby="direccionHelp" placeholder="Direccion"
-              required>
-            <small id="direccionHelp" class="form-text text-muted"></small>
+            <label for="exampleInputCiudad1">Ciudad</label>
+            <input type="ciudad" class="form-control" id="Ciudad" aria-describedby="ciudadHelp" placeholder="Ciudad" required>
+            <small id="ciudadHelp" class="form-text text-muted"></small>
           </div>
           <div class="form-group">
             <label for="exampleInputRubro1">Rubro</label>
-            <input type="rubro" class="form-control" id="exampleInputRubro1" aria-describedby="rubroHelp" placeholder="Rubro" required>
+            <input type="rubro" class="form-control" id="Rubro" aria-describedby="rubroHelp" placeholder="Rubro" required>
             <small id="rubroHelp" class="form-text text-muted"></small>
           </div>
+          <div class="form-group">
+            <label for="exampleInputMail1">Mail</label>
+            <input type="mail" class="form-control" id="Mail" aria-describedby="mailHelp" placeholder="Mail" required>
+            <small id="mailHelp" class="form-text text-muted"></small>
+          </div>
 
         </div>
-      </div>
-      <div class="row">
-      </div>
-      <div class="row">
       </div>
     </div>
-    <h5 aling:center>
-      Datos Gestor
-    </h5>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-
-          <div class="form-group">
-            <label for="exampleInputNombreApellido1">Nombre y Apellido</label>
-            <input type="name" class="form-control" id="exampleInputNombreApellido1" aria-describedby="nombreApellidoHelp" placeholder="Nombre y Apellido" required>
-            <small id="nombreApellidoHelp" class="form-text text-muted"></small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required>
-            <small id="emailHelp" class="form-text text-muted"></small>
-          </div>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-
-          <div class="form-group">
-            <label for="exampleInputTelefono1">Telefono</label>
-            <input type="telefono" class="form-control" id="exampleInputTelefono1" aria-describedby="telefonoHelp" placeholder="Telefono" required>
-            <small id="telefonoHelp" class="form-text text-muted"></small>
-          </div>
-
-        </div>
-      </div>
-      <h5 aling:center>
-        Datos Acceso
-      </h5>
-      <div class="container">
+    
         <div class="row">
           <div class="col">
-
-            <div class="form-group">
-              <label for="exampleInputNombreUsuario1">Nombre De Usuario</label>
-              <input type="name" class="form-control" id="exampleInputNombreUsuario1" aria-describedby="nombreUsuarioHelp" placeholder="Nombre De Usuario" required>
-              <small id="nombreUsuarioHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputContraseña1">Contraseña</label>
-              <input type="contraseña" class="form-control" id="exampleInputContraseña1" aria-describedby="contraseñaHelp" placeholder="Contraseña" required>
-              <small id="contraseñaHelp" class="form-text text-muted"></small>
-            </div>
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-
-            <div class="form-group">
-              <label for="exampleInputRepetirNombreUsuario1">Repetir Nombre Usuario</label>
-              <input type="repetirNombreUsuario" class="form-control" id="exampleInputRepetirNombreUsuario1" aria-describedby="repetirNombreUsuarioHelp"
-                placeholder="Repetir Nombre Usuario" required>
-              <small id="repetirNombreUsuarioHelp" class="form-text text-muted"></small>
-            </div>
             <div class="form-check">
               <input type="checkbox" class="form-check-input" id="dropdownCheck2">
               <label class="form-check-label" for="dropdownCheck2">
@@ -141,7 +77,35 @@
               </label>
 
 
-              <input type="submit" href="/perfilgestorempresa" value="Enviar">
+              <input onclick="sendData()" type="submit" href="/perfilgestorempresa" class="btn btn-primary btn-lg" value="Enviar">
+                <script>
+                  /*router.get('/perfilcanididato', async function(req, res) {
+                    let candidato = await Candidato.insert();
+                    res.json(candidato.rows);
+                  });*/
+                  function sendData(){
+                    console.log('hola');
+                    let data = {
+                      idEmpresa: document.getElementById('IdEmpresa').value,
+                      nombre: document.getElementById('NombreEmpresa').value,
+                      direccion: document.getElementById('Direccion').value,
+                      ciudad: document.getElementById('Ciudad').value,
+                      rubro: document.getElementById('Rubro').value,
+                      mail: document.getElementById('Mail').value,
+                    }
+                    console.log(data);
+                    fetch('http://localhost:3000/empresa', {
+                              method: 'POST', // or 'PUT'
+                              body: JSON.stringify(data), // data can be `string` or {object}!
+                              headers:{
+                                'Content-Type': 'application/json'
+                              }
+                            });
+                  }
+
+
+                </script>
+              </input>
 
 
             </div>
