@@ -5,6 +5,7 @@ const router = require('./ruta');
 const Candidato = require('./queries/candidato');
 const Usuario = require('./queries/usuario');
 const Empresa = require('./queries/empresa');
+const Oferta = require('./queries/oferta');
 
 const PORT = 3000;
 
@@ -42,6 +43,32 @@ app.post("/usuario", async function(req, res){
   let info = req.body;
   console.log(req.body);
   Usuario.insertUsuario(info).then(() => {
+    console.log('ejecutado con exito')
+  }).catch(err => {
+    console.log('errorrrrr')
+    console.log(err)
+  });
+});
+
+app.post("/buscaroferta", async function(req, res){
+  let info = req.body;
+  console.log(req.body);
+  //Oferta.buscarOferta(info).then(() => {
+    //console.log('ejecutado con exito')
+  //}).catch(err => {
+ // console.log('errorrrrr')
+  //  console.log(err)
+  //});
+
+  let ofertas = await Oferta.buscarOferta(info);
+  console.log('ofertas => ',ofertas);
+  res.send(ofertas);
+});
+
+app.post("/oferta", async function(req, res){
+  let info = req.body;
+  console.log(req.body);
+  Oferta.insertOferta(info).then(() => {
     console.log('ejecutado con exito')
   }).catch(err => {
     console.log('errorrrrr')

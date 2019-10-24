@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Usuario = require('../queries/empresa');
+const Empresa = require('../queries/empresa');
 
 router.get('/', async function(req, res, next) {
   const result = await Empresa.all().catch(next);

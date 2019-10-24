@@ -7,11 +7,24 @@
  <link rel="stylesheet" href="./HojaDeEstilo.css"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+ <nav class="navbar navbar-expand-sm bg-light navbar-dark bg-dark">
+    <nav class="navbar navbar-dark primary-color">
+        <a class="navbar-brand" href="/inicio">
+          <img src="icono.png" height="60" width="60" alt="mdb logo">
+        </a>
+      </nav>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/registrousuario"></a>
+    </li>
+  </ul>
+</nav>
+
 </head>
 
 <body>
 
-  <div class="margenesRegistro">
+  <div  class="margenesRegistro">
     <div class="shadow-lg p-3 mb-6 mr-6 ml-6 mt-30 bg-white rounded" class="overflow-auto" class="container">
         <img src="icono.png" style="width: 10%">
         <div class="day">
@@ -65,42 +78,42 @@
                       Acepto Los Terminos
                   </label>
             </div>
+            
+            <input onclick="sendData()" type="submit" href="/perfilcandidato" class="btn btn-primary btn-lg" value="Enviar">
+            <script>
+            /*router.get('/perfilcanididato', async function(req, res) {
+              let candidato = await Candidato.insert();
+              res.json(candidato.rows);
+            });*/
+            function sendData(){
+              let data = {
+                nombre: document.getElementById('exampleInputNombre1').value,
+                apellido: document.getElementById('exampleInputApellido1').value,
+                email: document.getElementById('exampleInputEmail1').value,
+                cedula: document.getElementById('exampleInputCi1').value,
+                contraseña: document.getElementById('exampleInputContraseña1').value,
+                telefono: document.getElementById('exampleInputTelefono1').value,
+                fechanac: document.getElementById('inputFechaDeNacimiento').value,
+              }
+              console.log(data);
+              fetch('http://localhost:3000/usuario', {
+                        method: 'POST', // or 'PUT'
+                        body: JSON.stringify(data), // data can be `string` or {object}!
+                        headers:{
+                          'Content-Type': 'application/json'
+                        }
+                      });
+            }
+
+
+          </script>
+        </input>
 
           </div>
       </div>
     </div>
   </div>
 
-                            <input onclick="sendData()" type="submit" href="/formularioverificacion" class="btn btn-primary btn-lg" value="Enviar">
-                              <script>
-                              /*router.get('/perfilcanididato', async function(req, res) {
-                                let candidato = await Candidato.insert();
-                                res.json(candidato.rows);
-                              });*/
-                              function sendData(){
-                                console.log('hola');
-                                let data = {
-                                  nombre: document.getElementById('exampleInputNombre1').value,
-                                  apellido: document.getElementById('exampleInputApellido1').value,
-                                  email: document.getElementById('exampleInputEmail1').value,
-                                  cedula: document.getElementById('exampleInputCi1').value,
-                                  contraseña: document.getElementById('exampleInputContraseña1').value,
-                                  telefono: document.getElementById('exampleInputTelefono1').value,
-                                  fechanac: document.getElementById('inputFechaDeNacimiento').value,
-                                }
-                                console.log(data);
-                                fetch('http://localhost:3000/usuario', {
-                                          method: 'POST', // or 'PUT'
-                                          body: JSON.stringify(data), // data can be `string` or {object}!
-                                          headers:{
-                                            'Content-Type': 'application/json'
-                                          }
-                                        });
-                              }
-
-
-                            </script>
-                          </input>
 
 
                         </div>

@@ -25,6 +25,10 @@ router.get('/curriculum',function(req,res){
 	res.sendFile (__dirname+'/views/CV.html');
 });
 
+router.get('/agregaroferta',function(req,res){
+	res.sendFile (__dirname+'/views/AgregarOferta.html');
+});
+
 router.get('/editarcurriculum',function(req,res){
 	res.sendFile (__dirname+'/views/CVEdit.html');
 });
@@ -51,6 +55,14 @@ router.get('/mistestinvitaciones',function(req,res){
 
 router.get('/oferta',function(req,res){
 	res.sendFile (__dirname+'/views/Oferta.html');
+});
+
+router.get('/buscaroferta',function(req,res){
+	res.sendFile (__dirname+'/views/Inicio.html');
+});
+
+router.get('/inicio',function(req,res){
+	res.sendFile (__dirname+'/views/Inicio.html');
 });
 
 router.get('/ofertamisinvitaciones',function(req,res){

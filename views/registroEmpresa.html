@@ -5,27 +5,28 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="./HojaDeEstilo.css" />
 
-  <nav class="navbar navbar-expand-sm bg-dark">
-
+  <nav class="navbar navbar-expand-sm bg-light navbar-dark bg-dark">
+      <nav class="navbar navbar-dark primary-color">
+          <a class="navbar-brand" href="/inicio">
+            <img src="icono.png" height="60" width="60" alt="mdb logo">
+          </a>
+        </nav>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#"></a>
+        <a class="nav-link" href="/registrousuario"></a>
       </li>
+    </ul>
   </nav>
 </head>
 
 <body>
+    <div  class="margenesRegistro">
   <div class="container">
-    <div class="toggleButton">
-      <div class="border">
-        <div class="button">
-
-        </div>
-      </div>
+  
     </div>
-    <div class="day">
+    <div style="width: 80%; height: 500px;" class="day mx-auto">
       <div class="row">
-        <div class="col">
+        <div class="col-6">
           <form action="/perfilgestorempresa" method="GET">
             <div class="form-group">
               <label for="exampleInputId1">Id Empresa</label>
@@ -45,9 +46,7 @@
             </div>
 
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
+        <div class="col-6">
           <div class="form-group">
             <label for="exampleInputCiudad1">Ciudad</label>
             <input type="ciudad" class="form-control" id="Ciudad" aria-describedby="ciudadHelp" placeholder="Ciudad" required>
@@ -58,17 +57,9 @@
             <input type="rubro" class="form-control" id="Rubro" aria-describedby="rubroHelp" placeholder="Rubro" required>
             <small id="rubroHelp" class="form-text text-muted"></small>
           </div>
-          <div class="form-group">
-            <label for="exampleInputMail1">Mail</label>
-            <input type="mail" class="form-control" id="Mail" aria-describedby="mailHelp" placeholder="Mail" required>
-            <small id="mailHelp" class="form-text text-muted"></small>
-          </div>
-
         </div>
-      </div>
     </div>
-    
-        <div class="row">
+    <br>
           <div class="col">
             <div class="form-check">
               <input type="checkbox" class="form-check-input" id="dropdownCheck2">
@@ -79,19 +70,13 @@
 
               <input onclick="sendData()" type="submit" href="/perfilgestorempresa" class="btn btn-primary btn-lg" value="Enviar">
                 <script>
-                  /*router.get('/perfilcanididato', async function(req, res) {
-                    let candidato = await Candidato.insert();
-                    res.json(candidato.rows);
-                  });*/
                   function sendData(){
-                    console.log('hola');
                     let data = {
                       idEmpresa: document.getElementById('IdEmpresa').value,
                       nombre: document.getElementById('NombreEmpresa').value,
                       direccion: document.getElementById('Direccion').value,
                       ciudad: document.getElementById('Ciudad').value,
                       rubro: document.getElementById('Rubro').value,
-                      mail: document.getElementById('Mail').value,
                     }
                     console.log(data);
                     fetch('http://localhost:3000/empresa', {
@@ -108,11 +93,11 @@
               </input>
 
 
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   </form>
 

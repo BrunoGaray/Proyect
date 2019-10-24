@@ -6,7 +6,7 @@ function all() {
 }
 
 function select(idEmpresa) {
-  const query = `select usuario.* from empresa
+  const query = `select empresa.* from empresa
                 where idEmpresa = ${idEmpresa};`;
   return client.query(query)
 }
@@ -57,8 +57,8 @@ function del(idEmpresa) {
 
 function insertEmpresa(data){
 
-  const query = `insert into empresa(idEmpresa, nombre, direccion, ciudad, rubro, mail)
-                  values('${data.idEmpresa}','${data.nombre}','${data.direccion}','${data.ciudad}','${data.rubro}','${data.mail}')`;
+  const query = `insert into empresa(idEmpresa, nombre, direccion, ciudad, rubro)
+                  values('${data.idEmpresa}','${data.nombre}','${data.direccion}','${data.ciudad}','${data.rubro}')`;
 
   console.log(query)
 

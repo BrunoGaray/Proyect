@@ -1,0 +1,128 @@
+<html>
+        <head>
+          <link rel="shortcut icon" href="favicon.ico"/>
+        
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <link rel="stylesheet" href="./HojaDeEstilo.css"/>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+         <nav class="navbar navbar-expand-sm bg-light navbar-dark bg-dark">
+          <nav class="navbar navbar-dark primary-color">
+              <a class="navbar-brand" href="/">
+                <img src="icono.png" height="60" width="60" alt="mdb logo">
+              </a>
+            </nav>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/registrousuario"></a>
+          </li>
+        </ul>
+      </nav>
+        
+        </head>
+        
+        <body>
+        
+          <div class="margenesRegistro">
+            <div class="shadow-lg p-3 mb-6 mr-6 ml-6 mt-30 bg-white rounded" class="overflow-auto" class="container">
+                <img src="icono.png" style="width: 10%">
+                <div class="day">
+                    <form action="/registrousuario" method="POST">
+                    <div class="row">
+                        <div class="col">
+                              <div class="form-group">
+                                  <label for="numSerie">Numero De Serie*</label>
+                                  <input type="number" class="form-control" id="numSerie" aria-describedby="numSerieHelp" placeholder="Numero De Serie"
+                                      required>
+                                  <small id="numSerieHelp" class="form-text text-muted"></small>
+                              </div>
+        
+                    <div class="form-group">
+                        <label for="sueldo">Sueldo*</label>
+                        <input type="name" class="form-control" id="sueldo" aria-describedby="sueldo" placeholder="Sueldo*"
+                            required>
+                        <small id="ApellidoHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="requisitos">Requisitos*</label>
+                        <input type="name" class="form-control" id="requisitos" aria-describedby="requisitosHelp" placeholder="Requisitos" required>
+                        <small id="requisitosHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                            <label for="area">Area*</label>
+                            <input type="area" class="form-control" id="area" aria-describedby="areaHelp" placeholder="Area" required>
+                            <small id="areaHelp" class="form-text text-muted"></small>
+                        </div>
+                        <label for="puestosVacantes">Puestos Vacantes*</label>
+                        <input type="puestosVacantes" class="form-control" id="puestosVacantes" aria-describedby="puestosVacantesHelp" placeholder="puestosVacantes"
+                            required>
+                        <small id="puestosVacantes" class="form-text text-muted"></small>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="descripcon">Descripcion*</label>
+                        <input type="telefono" class="form-control" id="descripcion" aria-describedby="descripcionHelp" placeholder="Descripcion" required>
+                        <small id="descripcionHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                      <label for="edadRequerida">Edad Requerida*</label>
+                      <input type="age" class="form-control" id="edadRequerida" placeholder="Edad Requerida" required>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="puesto">Puesto*</label>
+                            <input type="puesto" class="form-control" id="puesto" placeholder="Puesto" required>
+                          </div>
+                      </div>
+                      <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="dropdownCheck2" required>
+                          <label class="form-check-label" for="dropdownCheck2">
+                              Acepto Los Terminos
+                          </label>
+                    </div>
+                    <input onclick="sendData()" type="submit" href="/formularioverificacion" class="btn btn-primary btn-lg" value="Enviar">
+                    <script>
+                    function sendData(){
+                      let data = {
+                        numSerie: document.getElementById('numSerie').value,
+                        sueldo: document.getElementById('sueldo').value,
+                        requisitos: document.getElementById('requisitos').value,
+                        area: document.getElementById('area').value,
+                        puestosVacantes: document.getElementById('puestosVacantes').value,
+                        descripcion: document.getElementById('descripcion').value,
+                        edadRequerida: document.getElementById('edadRequerida').value,
+                        puesto: document.getElementById('puesto').value,
+                      }
+                      console.log(data);
+                      fetch('http://localhost:3000/oferta', {
+                                method: 'POST', // or 'PUT'
+                                body: JSON.stringify(data), // data can be `string` or {object}!
+                                headers:{
+                                  'Content-Type': 'application/json'
+                                }
+                              });
+                    }
+
+
+                  </script>
+                </input>
+        
+                  </div>
+              </div>
+            </div>
+          </div>
+                                </div>
+                        </div>
+                </div>
+            </div>
+        
+            </div>
+            </div>
+            </form>
+            </div>
+          </div>
+        </body>
+        
+        </html>
+        
