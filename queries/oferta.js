@@ -65,17 +65,17 @@ function del(numserie) {
     });*/
 
     client.query(query, (error, result) => {
-      console.log(result)
+      // console.log(result)
     })
 
     let result = await client.query(query);
 
-    console.log('result', result.rows);
+    // console.log('result', result.rows);
     
 
     //res.render('listarofertas', { oferta: filas });
 
-    console.log(query)
+    // console.log(query)
   
 
     return result.rows;
